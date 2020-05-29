@@ -201,11 +201,9 @@
   justify-content: center;
   align-items: center;
 
-}
-
-.popup_visible {
-  display: fle
-}
+}/*.popup_visible {
+  display: flex;
+} */
 
 .popup__container {
   background: #fff;

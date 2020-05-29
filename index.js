@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
   profileTitle.textContent = inputTitle.value;
   profileSubtitle.textContent = inputSubtitle.value;
   popup.classList.toggle('popup_visible');
-  togglePopup ();  // these two are the same 
+  togglePopup ();  // these two are the same git pus
 
 })
 

@@ -1,16 +1,18 @@
-# Project 4: Around The U.S.
+# Around the U.S
 
-### Overview
+Our 4th project at Practicum by Yandex.
+This website is interactive and functional. This is the first project we impelmented the use of Javascript. A user is able to click to edit, type into the input fields and save the inputs to the page.
 
-* Figma
-* Images
+## Description
 
-**Figma**
+Finished product of Project 4. The website is for viewing, adding, removing and liking travel photos.
 
-* [Link to the project in Figma](https://www.figma.com/file/mUgu8OSHWE0M6p6vfwmdu9/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+## New
 
-**Images**
+Installation of Javascript. The entirety of the website is not comlete, we will be adding new features in the future.
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+Link to project:
+file:///C:/Users/Admin/dev/web_project_4/index.html
 
-Have fun with JavaScript!
+
+

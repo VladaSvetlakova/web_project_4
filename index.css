@@ -196,14 +196,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(37, 36, 36);
+  /*background: rgb(37, 36, 36); */
   display: none;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, .5);
 
-}/*.popup_visible {
+}.popup_visible {
   display: flex;
-} */
+}
 
 .popup__container {
   background: #fff;
@@ -249,7 +250,7 @@
     position: absolute;
     top: -35px;
     left: -35px;
-    z-index: 3;
+    z-index: 10;
 
 }
 

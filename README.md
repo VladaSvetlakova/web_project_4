@@ -12,7 +12,7 @@ Finished product of Project 4. The website is for viewing, adding, removing and 
 Installation of Javascript. The entirety of the website is not comlete, we will be adding new features in the future.
 
 Link to project:
-file:///C:/Users/Admin/dev/web_project_4/index.html
+https://vladasvetlakova.github.io/web_project_4/
 
 
 

@@ -1,0 +1,11 @@
+@import url('./__button/elements__button.css');
+@import url('./__grid/elements__grid.css');
+@import url('./__info/elements__info.css');
+@import url('./__item/elements__item.css');
+@import url('./__photo/elements__photo.css');
+@import url('./__place/elements__place.css');
+
+.elements {
+    max-width: 882px;
+    margin: 47px auto;
+}

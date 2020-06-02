@@ -1,0 +1,11 @@
+.elements__button {
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 21px;
+    height: 18px;
+    background-image: url(../../../images/heart.svg);
+    background-repeat: no-repeat;
+    align-self: center;
+}

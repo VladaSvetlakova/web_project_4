@@ -10,8 +10,8 @@ const saveButton = document.querySelector('.popup__button-save');
 
 
 function togglePopup() {
- // popup.classList.toggle('popup_hidden');
-  popup.classList.toggle('popup_visible');
+  //popup.classList.toggle('popup_hidden');
+  popup.classList.toggle('popup__visible');
 }
 
 

@@ -1,0 +1,13 @@
+.elements__info {
+    display: flex;
+    flex-direction: row;
+    height: 23px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 31px;
+    max-width: 246px;
+    left: 21px;
+    right: 15px;
+    margin: auto;
+    align-items: center;
+}

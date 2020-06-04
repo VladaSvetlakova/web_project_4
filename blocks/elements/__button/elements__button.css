@@ -1,15 +1,13 @@
 .elements__button {
     border: none;
     cursor: pointer;
-    
     display: flex;
-
     padding: 0;
     width: 21px;
     height: 18px;
     background-image: url(../../../images/heart.svg);
     background-repeat: no-repeat;
     align-self: center;
-    background-color: #fff;
+    background-color: transparent;
 }
 

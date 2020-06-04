@@ -1,0 +1,18 @@
+.popup__input-subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  width: 358px;
+  height: 26px;
+  color: #000000;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  margin: 0 36px 29px;
+}
+
+@media screen and (max-width: 425px) {
+  .popup__input-subtitle {
+    max-width: 200px;
+    margin: 20px;
+  }
+}

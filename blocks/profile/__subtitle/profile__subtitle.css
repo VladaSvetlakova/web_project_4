@@ -19,8 +19,10 @@
         font-size: 14px;
         line-height: 17px;
         text-align: center;
-        margin-top: 14px;
+        margin-top: 0;
         margin-bottom: 36px;
+        max-width: 281px;
+        line-height: 17px;
 
     }
 }

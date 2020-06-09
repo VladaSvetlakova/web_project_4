@@ -1,7 +1,6 @@
 .elements__button {
     border: none;
     cursor: pointer;
-    display: flex;
     padding: 0;
     width: 21px;
     height: 18px;

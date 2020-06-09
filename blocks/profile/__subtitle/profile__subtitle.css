@@ -13,15 +13,11 @@
 @media screen and (max-width: 700px){
     .profile__subtitle {
         margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         font-size: 14px;
         line-height: 17px;
         text-align: center;
         margin-top: 0;
         margin-bottom: 36px;
-        max-width: 281px;
         line-height: 17px;
 
     }

@@ -27,48 +27,7 @@
       </section>
       <section class="elements">
         <ul class="elements__grid">
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/maroonbells.jpg" alt = "maroon bells">
-            <div class="elements__info">
-              <h2 class="elements__place">Maroon Bells</h2>
-              <button class="elements__button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/Fujiyoshida.jpg" alt = "japan">
-            <div class="elements__info">
-              <h2 class="elements__place">Fujiyoshida</h2>
-              <button class="elements__button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/mesaverde.jpg" alt = "mesa verde">
-            <div class="elements__info">
-              <h2 class="elements__place">Mesa Verde</h2>
-              <button class="elements__button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/china.jpg" alt = "china">
-            <div class="elements__info">
-              <h2 class="elements__place">Great Wall of China</h2>
-              <button class="elements__button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/cairo.jpg" alt = "cairo">
-            <div class="elements__info">
-              <h2 class="elements__place">Cairo</h2>
-              <button class="elements__button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/finland.jpg" alt = "finland">
-            <div class="elements__info">
-              <h2 class="elements__place">Yllasjarvi</h2>
-              <button class="elements__button"></button>
-            </div>
-          </li>
+
         </ul>
       </section>
     </main>
@@ -77,7 +36,7 @@
     </footer>
 
 
-    <section class = "popup">
+    <section class = "popup popup__type_edit-profile">
       <div class = "popup__container">
         <button class = "popup__button-close"></button>
         <form class = "popup__form" action = "#">
@@ -89,7 +48,38 @@
       </div>
     </section>
 
+    <section class = "popup popup__type_add-card">
+      <div class = "popup__container">
+        <button class = "popup__button-close"></button>
+        <form class = "popup__form" action = "#">
+          <h3 class = "popup__title">New Place</h3>
+          <input class = "popup__input-title popup__input-title_card-name" type = "text" value = "Title" name = "name">
+          <input class = "popup__input-subtitle popup__input-subtitle_url" type = "url" value = "Image Link" name = "url">
+          <button class = "popup__button-save" type = "submit">Save</button>
+        </form>
+      </div>
+    </section>
+
+    <section class = "popup popup__type_image">
+      <div class = "popup__container popup__container_transparent">
+        <button class = "popup__button-close"></button>
+        <figure>
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+
   </div>
+  <template class = "card-template">
+    <li class="elements__item card">
+      <button class = "elements__remove-button"></button>
+      <div class="elements__photo" ></div>
+      <div class="elements__info">
+        <h2 class="elements__place"></h2>
+        <button class="elements__button"></button>
+      </div>
+    </li>
+  </template>
   <script src = "./index.js"></script>
 </body>
 

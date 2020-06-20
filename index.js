@@ -20,6 +20,9 @@ const form = document.querySelector('.popup__form');
 const saveButton = document.querySelector('.popup__button-save');
 const addButton = document.querySelector('.profile__button-add');
 
+const cardSaveButton = addCardPopup.querySelector('.popup__button-save');
+const newCardTitle = addCardPopup.querySelector('.popup__input-title_card-name');
+const newCardImage = addCardPopup.querySelector('popup__input-subtitle_url');
 
 
 
@@ -140,6 +143,16 @@ initialCards.forEach((data) =>{
   renderCard(data);
 });
 
+//Add new card to beggining of grid
+addCardPopup.querySelector('.popup__form').addEventListener('submit', (e) =>{
+  e.preventDefault();
+  const newCard = {
+    name: newCardTitle.value,
+    link: newCardImage.value
+  }
+  renderCard(newCard);
+  togglePopup(addCardPopup);
+})
 
 
 

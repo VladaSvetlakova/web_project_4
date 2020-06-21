@@ -103,6 +103,7 @@ const initialCards = [
 
 const cardTemplate = document.querySelector(".card-template").content.querySelector(".elements__item");
 
+//creates a clone of the card template, returns the card , cardElement
 const createCard = (data) => {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitle = cardElement.querySelector(".elements__place");
@@ -147,6 +148,7 @@ const renderCard = (data) => {
 
 };
 
+//runs through initial array and 'renders' the card for each
 initialCards.forEach((data) =>{
   renderCard(data);
 });

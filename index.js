@@ -1,17 +1,6 @@
 const imagePopup = document.querySelector('.popup__type_image');
 const imgPopup = imagePopup.querySelector('.popup__img');
 const imgCaption = imagePopup.querySelector('.popup__caption');
-
-const editButton = document.querySelector('.profile__button-edit');
-
-const editProfilePopup = document.querySelector('.popup__type_edit-profile');
-
-const addCardPopup = document.querySelector('.popup__type_add-card');
-
-const editCloseButton = editProfilePopup.querySelector('.popup__button-close');
-
-const addCloseButton = addCardPopup.querySelector('.popup__button-close');
-
 const imageCloseButton = imagePopup.querySelector('.popup__button-close');
 
 const inputTitle = document.querySelector('.popup__input-title');
@@ -27,14 +16,19 @@ const cardSaveButton = addCardPopup.querySelector('.popup__button-save');
 const newCardTitle = addCardPopup.querySelector('.popup__input-title_card-name');
 const newCardImage = addCardPopup.querySelector('.popup__input-subtitle_url');
 
+const editButton = document.querySelector('.profile__button-edit');
 
+const editProfilePopup = document.querySelector('.popup__type_edit-profile');
 
+const addCardPopup = document.querySelector('.popup__type_add-card');
 
+const editCloseButton = editProfilePopup.querySelector('.popup__button-close');
+
+const addCloseButton = addCardPopup.querySelector('.popup__button-close');
 
 addButton.addEventListener('click', () => {
   togglePopup();
 });
-
 
 function togglePopup(modal) {
   modal.classList.toggle('popup_visible');
@@ -52,7 +46,6 @@ form.addEventListener('submit', onSubmit);
 editButton.addEventListener('click', () => {
   togglePopup(editProfilePopup);
 });
-
 
 editCloseButton.addEventListener('click', () => {
   togglePopup(editProfilePopup)
@@ -75,9 +68,6 @@ addCloseButton.addEventListener('click', () => {
     imgPopup.src = data.link
     imgCaption.textContent  = data.name
   }
-
-
-
 
 const initialCards = [
   {
@@ -114,7 +104,6 @@ const createCard = (data) => {
   const cardImage = cardElement.querySelector(".elements__photo");
   const likeButton = cardElement.querySelector(".elements__button");
   const cardRemoveButton = cardElement.querySelector(".elements__remove-button");
-
 
   cardTitle.textContent = data.name;
   cardImage.style.backgroundImage = `url(${data.link})`;

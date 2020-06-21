@@ -1,4 +1,7 @@
-const imagePopup = document.querySelector('.popup__type_image')
+const imagePopup = document.querySelector('.popup__type_image');
+const imgPopup = imagePopup.querySelector('.popup__img');
+const imgCaption = imagePopup.querySelector('.popup__caption');
+
 const editButton = document.querySelector('.profile__button-edit');
 
 const editProfilePopup = document.querySelector('.popup__type_edit-profile');
@@ -22,7 +25,9 @@ const addButton = document.querySelector('.profile__button-add');
 
 const cardSaveButton = addCardPopup.querySelector('.popup__button-save');
 const newCardTitle = addCardPopup.querySelector('.popup__input-title_card-name');
-const newCardImage = addCardPopup.querySelector('popup__input-subtitle_url');
+const newCardImage = addCardPopup.querySelector('.popup__input-subtitle_url');
+
+
 
 
 
@@ -66,9 +71,11 @@ addCloseButton.addEventListener('click', () => {
   togglePopup(addCardPopup);
 });
 
-/*function toggleLike() {
-  likeButton.classList.toggle("elements__button_dark");
-} */
+  function showImage(data){
+    imgPopup.src = data.link
+    imgCaption.textContent  = data.name
+  }
+
 
 
 
@@ -108,8 +115,11 @@ const createCard = (data) => {
   const likeButton = cardElement.querySelector(".elements__button");
   const cardRemoveButton = cardElement.querySelector(".elements__remove-button");
 
+
   cardTitle.textContent = data.name;
   cardImage.style.backgroundImage = `url(${data.link})`;
+  cardImage.style.backgroundSize = "cover";
+  cardImage.style.minHeight = "282px";
 
   cardRemoveButton.addEventListener('click', (e) => {
     e.target.closest('.elements__item').remove();
@@ -121,6 +131,7 @@ const createCard = (data) => {
   });
 
   cardImage.addEventListener('click', () => {
+    showImage(data);
     togglePopup(imagePopup);
   });
 
@@ -134,9 +145,11 @@ const createCard = (data) => {
 
 const grid = document.querySelector(".elements__grid");
 
+// prepend adds CardElement to the beginning of the list
+//CardElement already has all the children inside already modified
 const renderCard = (data) => {
-    grid.prepend(createCard(data)); // prepend adds CardElement to the beginning of the list of children
-  //CardElement already has all the children inside already modified
+    grid.prepend(createCard(data));
+
 };
 
 initialCards.forEach((data) =>{
@@ -152,7 +165,7 @@ addCardPopup.querySelector('.popup__form').addEventListener('submit', (e) =>{
   }
   renderCard(newCard);
   togglePopup(addCardPopup);
-})
+});
 
 
 

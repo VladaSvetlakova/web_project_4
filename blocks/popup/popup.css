@@ -7,6 +7,7 @@
 @import url('./__input-title/popup__input-title.css');
 @import url('./__container/_transparent/popup__container_transparent.css');
 @import url('./__img/popup__img.css');
+@import url('./__caption/popup__caption.css');
 
 
 .popup {

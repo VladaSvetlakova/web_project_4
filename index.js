@@ -23,11 +23,6 @@ const newCardTitle = addCardPopup.querySelector('.popup__input-title_card-name')
 const newCardImage = addCardPopup.querySelector('.popup__input-subtitle_url');
 
 
-addButton.addEventListener('click', () => {
-  togglePopup();
-});
-
-
 function togglePopup(modal) {
   modal.classList.toggle('popup_visible');
 }
@@ -63,10 +58,14 @@ addCloseButton.addEventListener('click', () => {
   togglePopup(addCardPopup);
 });
 
-  function showImage(data){
+imageCloseButton.addEventListener('click', () => {
+  togglePopup(imagePopup);
+});
+
+function showImage(data){
     imgPopup.src = data.link
     imgCaption.textContent  = data.name
-  }
+}
 
 
 const initialCards = [
@@ -123,10 +122,6 @@ const createCard = (data) => {
 
   cardImage.addEventListener('click', () => {
     showImage(data);
-    togglePopup(imagePopup);
-  });
-
-  imageCloseButton.addEventListener('click', () => {
     togglePopup(imagePopup);
   });
 

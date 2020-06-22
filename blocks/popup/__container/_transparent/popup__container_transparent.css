@@ -2,10 +2,8 @@
   background: transparent;
   padding: 0;
   border-radius: 0;
-  max-width: 75vw;
-  max-height: 75vh;
+  width: auto;
+  height: auto;
   box-shadow: none;
-
-
 }
 

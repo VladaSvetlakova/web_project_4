@@ -11,7 +11,10 @@
   position: absolute;
   top: 19px;
   right: 15px;
+  z-index: 1;
+  transition: .5s opacity ease-in-out;
+}
 
-
-
+.elements__remove-button:hover {
+  opacity: .5;
 }

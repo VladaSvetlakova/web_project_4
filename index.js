@@ -105,7 +105,7 @@ const createCard = (data) => {
   const likeButton = cardElement.querySelector(".elements__button");
   const cardRemoveButton = cardElement.querySelector(".elements__remove-button");
 
-
+  //Title & image of card are taken from the title and url of the inputs of the data parameter
   cardTitle.textContent = data.name;
   cardImage.style.backgroundImage = `url(${data.link})`;
   cardImage.style.backgroundSize = "cover";

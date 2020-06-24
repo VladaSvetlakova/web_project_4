@@ -5,12 +5,12 @@
     margin-left: auto;
     align-self: center;
     border: 1px solid white;
-    background-image: url(../../../images/plus.png);
+    background-image: url('../../../images/plus.png');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 2px;
     box-sizing: border-box;
-    transition: 0.2s;
+    transition: .2s;
     cursor: pointer;
     padding: 0;
 }

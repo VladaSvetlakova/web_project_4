@@ -1,5 +1,5 @@
 .elements__remove-button {
-  background-image: url(../../../images/trash.png);
+  background-image: url('../../../images/trash.png');
   border: none;
   cursor: pointer;
   padding: 0;

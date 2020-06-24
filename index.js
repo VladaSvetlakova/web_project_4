@@ -61,7 +61,6 @@ imageCloseButton.addEventListener('click', () => {
 });
 
 function showImage(data){
-    imgCaption.alt = data.name; //Does this work ?
     imgCaption.textContent  = data.name;
     imgPopup.src = data.link;
 };

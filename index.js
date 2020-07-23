@@ -1,14 +1,16 @@
-const imagePopup = document.querySelector('.popup_type_image');
-const imgPopup = imagePopup.querySelector('.popup__img');
-const imgCaption = imagePopup.querySelector('.popup__caption');
-const imageCloseButton = imagePopup.querySelector('.popup__button-close');
+const imagePopupParent = document.querySelector('.popup_type_image');
+const imagePopup = imagePopupParent.querySelector('.popup__img');
+const imgCaption = imagePopupParent.querySelector('.popup__caption');
+const popupContainer = imagePopupParent.querySelector('.popup__container');
+const imageCloseButton = imagePopupParent.querySelector('.popup__button-close');
+const body = document.querySelector('.main');
 
 const editButton = document.querySelector('.profile__button-edit');
 const editProfilePopup = document.querySelector('.popup_type_edit-profile');
 const editCloseButton = editProfilePopup.querySelector('.popup__button-close');
 
-const inputTitle = document.querySelector('.popup__input-title');
-const inputSubtitle = document.querySelector('.popup__input-subtitle');
+const inputTitle = document.querySelector('#title-input');
+const inputSubtitle = document.querySelector('#url-input');
 const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 
@@ -29,7 +31,7 @@ function submitEditProfileForm(submitEvent){
   submitEvent.preventDefault();
   profileTitle.textContent = inputTitle.value;
   profileSubtitle.textContent = inputSubtitle.value;
-  togglePopup ();
+  togglePopup (editProfilePopup);
 };
 
 form.addEventListener('submit', submitEditProfileForm);
@@ -56,13 +58,14 @@ addCloseButton.addEventListener('click', () => {
   togglePopup(addCardPopup);
 });
 
-imageCloseButton.addEventListener('click', () => {
-  togglePopup(imagePopup);
+imageCloseButton.addEventListener('click', (e) => {
+  togglePopup(imagePopupParent);
+  e.stopPropagation();
 });
 
 function showImage(data){
     imgCaption.textContent  = data.name;
-    imgPopup.src = data.link;
+    imagePopup.src = data.link;
 };
 
 
@@ -119,7 +122,7 @@ const createCard = (data) => {
 
   cardImage.addEventListener('click', () => {
     showImage(data);
-    togglePopup(imagePopup);
+    togglePopup(imagePopupParent);
   });
 
   return cardElement;
@@ -151,7 +154,23 @@ addCardPopup.querySelector('.popup__form').addEventListener('submit', (e) =>{
   togglePopup(addCardPopup);
 });
 
+imagePopup.addEventListener('click', (e) => {    //Click on actual img popup, we do not want the click to propogate
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+  return false;
+});
 
+imagePopupParent.addEventListener('click', (e) => {
+  togglePopup(imagePopupParent);
+});
+
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    togglePopup(imagePopupParent);
+  };
+});
 
 
 

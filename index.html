@@ -39,10 +39,14 @@
     <section class = "popup popup_type_edit-profile">
       <div class = "popup__container">
         <button class = "popup__button-close"></button>
-        <form class = "popup__form" action = "#">
+        <form  novalidate class = "popup__form" action = "#">
           <h3 class = "popup__title">Edit Profile</h3>
-          <input class = "popup__input-title" type = "text" placeholder = "Jacques Cousteau" name = "name">
-          <input class = "popup__input-subtitle" type = "text" placeholder = "Explorer" name = "position">
+          <input required id = "name-input" class = "popup__input" type = "text" placeholder = "Jacques Cousteau" name = "name" minlength = "2" maxlength = "40">
+          <span id="name-input-error" class="popup__error"></span>
+
+          <input required id ="position-input" class = "popup__input" type = "text" placeholder = "Explorer" name = "position" minlength ="2" maxlength = "200">
+          <span id="position-input-error" class="popup__input-error"></span>
+
           <button class = "popup__button-save" type = "submit">Save</button>
         </form>
       </div>
@@ -51,10 +55,14 @@
     <section class = "popup popup_type_add-card">
       <div class = "popup__container">
         <button class = "popup__button-close"></button>
-        <form class = "popup__form" action = "#">
+        <form  novalidate class = "popup__form" action = "#">
           <h3 class = "popup__title">New Place</h3>
-          <input class = "popup__input-title popup__input-title_card-name" type = "text" placeholder = "Title" name = "name">
-          <input class = "popup__input-subtitle popup__input-subtitle_url" type = "url" placeholder = "Image Link" name = "url">
+          <input required id = "title-input" class = "popup__input popup__input-title_card-name" type = "text" placeholder = "Title" name = "title" minlength = "1" maxlength = "30">
+          <span id="title-input-error" class="popup__input-error"></span>
+
+          <input required id = "url-input"class = "popup__input popup__input-subtitle_url" type = "url" placeholder = "Image Link" name = "url">
+          <span id="url-input-error" class="url__input-error"></span>
+
           <button class = "popup__button-save" type = "submit">Save</button>
         </form>
       </div>
@@ -82,6 +90,7 @@
     </li>
   </template>
   <script src = "./index.js"></script>
+  <script src = "./validate.js"></script>
 </body>
 
 </html>

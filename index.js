@@ -154,7 +154,7 @@ addCardPopup.querySelector('.popup__form').addEventListener('submit', (e) =>{
   togglePopup(addCardPopup);
 });
 
-imagePopup.addEventListener('click', (e) => {    //Click on actual img popup, we do not want the click to propogate
+imagePopup.addEventListener('click', (e) => {    //Click on actual img popup, we do not want the
   e.preventDefault();
   e.stopPropagation();
   e.stopImmediatePropagation();
@@ -162,15 +162,19 @@ imagePopup.addEventListener('click', (e) => {    //Click on actual img popup, we
 });
 
 imagePopupParent.addEventListener('click', (e) => {
-  togglePopup(imagePopupParent);
+  imagePopupParent.classList.remove('popup_visible');
 });
 
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    togglePopup(imagePopupParent);
+    imagePopupParent.classList.remove('popup_visible');
+    editProfilePopup.classList.remove('popup_visible');
+    addCardPopup.classList.remove('popup_visible');
   };
 });
+
+
 
 
 

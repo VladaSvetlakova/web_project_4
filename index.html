@@ -37,9 +37,9 @@
 
 
     <section class = "popup popup_type_edit-profile">
-      <div class = "popup__container">
+      <div class = "popup__container popup__container_">
         <button class = "popup__button-close"></button>
-        <form  novalidate class = "popup__form" action = "#">
+        <form  novalidate class = "popup__form popup__form_edit" action = "#">
           <h3 class = "popup__title">Edit Profile</h3>
           <input required id = "name-input" class = "popup__input" type = "text" placeholder = "Jacques Cousteau" name = "name" minlength = "2" maxlength = "40">
           <span id="name-input-error" class="popup__error"></span>
@@ -57,7 +57,7 @@
     <section class = "popup popup_type_add-card">
       <div class = "popup__container">
         <button class = "popup__button-close"></button>
-        <form  novalidate class = "popup__form" action = "#">
+        <form  novalidate class = "popup__form popup__form_card" action = "#">
           <h3 class = "popup__title">New Place</h3>
           <input required id = "title-input" class = "popup__input popup__input-title_card-name" type = "text" placeholder = "Title" name = "title" minlength = "1" maxlength = "30">
           <span id="title-input-error" class="popup__input-error"></span>

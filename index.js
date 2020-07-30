@@ -9,12 +9,14 @@ const editButton = document.querySelector('.profile__button-edit');
 const editProfilePopup = document.querySelector('.popup_type_edit-profile');
 const editCloseButton = editProfilePopup.querySelector('.popup__button-close');
 
-const inputTitle = document.querySelector('#title-input');
-const inputSubtitle = document.querySelector('#url-input');
+const inputTitle = document.querySelector('#name-input');
+const inputSubtitle = document.querySelector('#position-input');
 const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 
 const form = document.querySelector('.popup__form');
+const placeForm = document.querySelector('.popup__form_card');
+const editForm = document.querySelector('.popup__form_edit');
 const saveButton = document.querySelector('.popup__button-save');
 const addButton = document.querySelector('.profile__button-add');
 
@@ -23,7 +25,22 @@ const addCloseButton = addCardPopup.querySelector('.popup__button-close');
 const newCardTitle = addCardPopup.querySelector('.popup__input-title_card-name');
 const newCardImage = addCardPopup.querySelector('.popup__input-subtitle_url');
 
+let openModal = undefined;
+
 function togglePopup(modal) {
+  if (modal.classList.contains('popup_visible')) {
+    document.removeEventListener('keydown',  handleEscape)
+
+    modal.removeEventListener('click', handleClick)
+    openModal = undefined;
+
+  } else {
+    document.addEventListener("keydown", handleEscape)
+
+    modal.addEventListener('click',  handleClick)
+    openModal = modal;
+  }
+
   modal.classList.toggle('popup_visible');
 };
 
@@ -154,25 +171,45 @@ addCardPopup.querySelector('.popup__form').addEventListener('submit', (e) =>{
   togglePopup(addCardPopup);
 });
 
-imagePopup.addEventListener('click', (e) => {    //Click on actual img popup, we do not want the
+imagePopup.addEventListener('click', (e) => {    //stops click propogation from child element
   e.preventDefault();
   e.stopPropagation();
   e.stopImmediatePropagation();
   return false;
 });
 
-imagePopupParent.addEventListener('click', (e) => {
-  imagePopupParent.classList.remove('popup_visible');
+editForm.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+  return false;
 });
 
+placeForm.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+  return false;
+});
 
-document.addEventListener('keydown', (e) => {
+const handleEscape = (e) => {
   if (e.key === 'Escape') {
-    imagePopupParent.classList.remove('popup_visible');
-    editProfilePopup.classList.remove('popup_visible');
-    addCardPopup.classList.remove('popup_visible');
+    togglePopup(openModal);
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    return false;
   };
-});
+}
+
+const handleClick = (e) => {
+  openModal.classList.remove('popup_visible');
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+  return false;
+}
+
 
 
 
